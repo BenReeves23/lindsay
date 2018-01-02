@@ -1,0 +1,18 @@
+<h1>New Comment</h1>
+
+<%= render 'form', comment: @comment %>
+
+<%= link_to 'Back', comments_path %>
+
+ <div id="comments">
+
+    <%= render 'comments/form', comment: @comment %>
+
+      <% @blog.comments.each do |comment| %>
+      <p>
+  	    <%= blog.user.email %> said...<br />
+  	    <%= comment.comment_entry %>
+      </p>
+	<% end %>
+      
+</div>

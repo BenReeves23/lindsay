@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BLOG - LINDSAY DICKERSON</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" %>
+
+</head>
+
+<body>
+  <div class="container">
+ 		<div class="header">
+		<h1>LINDSAY DICKERSON</h1>
+
+		<div class="navigation">
+      
+      <div>
+        <p><%= link_to 'HOME', root_path, class: "navigate" %></p>
+        <p><%= link_to 'ABOUT', about_path, class: "navigate" %></p>
+        <p><a href="https://www.vimeo.com/user17318166" class="navigate">FILM</a></p>
+
+        <p class="dropdown">
+          <a href="#" class="dropdown-toggle navigate" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PORTFOLIO<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'BIRTH STORIES', birth_path, class: "navbar-brand" %></li>
+     			  <li><%= link_to 'BRIDALS', bridals_path, class: "navbar-brand" %></li>
+     			  <li><%= link_to 'ENGAGEMENTS', engagements_path, class: "navbar-brand" %></li>
+     			  <li><%= link_to 'FAMILIES', families_path, class: "navbar-brand" %></li>
+     			  <li><%= link_to 'LIFESTYLE', lifestyle_path, class: "navbar-brand" %></li>
+     			  <li><%= link_to 'PORTRAITS', portraits_path, class: "navbar-brand" %></li>
+          </ul>
+        </p>
+        <p><%= link_to 'BLOG', blogs_path, class: "navigate" %></p>
+		   	
+      </div>
+   	</div>
+	</div>
+
+	<h6 class="lines col-md-12"></h6>
+
+  <div class="content">
+ 		<%= yield %>
+ 	</div>
+   		
+	<h6 class="lines col-md-12"></h6>
+
+  <div id="social-media" class="col-md-3 pull-right">
+    <p class="pull-right">
+	    <%= link_to "https://www.facebook.com/lindsaydickerson10" do %>
+    		<i class= "fa fa-facebook"></i>
+			<% end %>
+		</p>
+		<p class="pull-right">
+	    <%= link_to "https://vimeo.com/user17318166" do %>
+				<i class= "fa fa-vimeo-square"></i>
+			<% end %>
+		</p>
+		<p class="pull-right">
+	    <%= link_to "https://www.pinterest.com/lindsaydick/" do %>
+				<i class= "fa fa-pinterest"></i>
+			<% end %>
+		</p>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+<div>
+  
+  <% @blogs.each do |blog| %>
+
+  <p class="posts"><%= image_tag blog.image.url %></p>
+  <p class="posts"><%= blog.entry %></p>
+
+  <p class="posts">
+  <%= link_to 'Edit', edit_blog_path(blog) %> |
+  <%= link_to 'Back', blogs_path %>
+  </p>
+
+  <% end %>
+
+</div>
